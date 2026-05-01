@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Admission Process | Yoani Springs Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for this page */
+        
+        .admission-steps {
+            background: var(--color-white, #ffffff);
+            border-radius: 28px;
+            padding: 2rem;
+            box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .step-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #eef2f6;
+        }
+        
+        .step-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: #f97316;
+            color: white;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .step-content h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .required-docs {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .required-docs ul {
+            list-style: disc;
+            padding-left: 1.25rem;
+            margin-top: 0.5rem;
+        }
+        
+        .required-docs li {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .step-item {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cms-root" data-route="admission">
+        <header class="site-header" id="main-header">
+            <div class="container header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.jpeg" alt="Yoani Springs Academy Logo" class="logo-img">
+                    </a>
+                </div>
+                <nav class="main-nav" id="primary-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="parent-zone.html">Parent Zone</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Menu">☰</button>
+                </nav>
+                <a href="contact.html" class="btn btn-primary enroll-nav-btn">Enroll Now</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Page Header -->
+            <section class="page-hero">
+                <div class="container">
+                    <h1>Admission Process</h1>
+                    <p>A clear, step‑by‑step guide to joining Yoani Springs Academy.</p>
+                </div>
+            </section>
+
+            <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+
+                <!-- Introduction -->
+                <div class="admission-steps">
+                    <h2>How to Apply to Yoani Springs Academy</h2>
+                    <p>We strive to make the admission process as smooth and transparent as possible. Below you'll find everything you need to enrol your child.</p>
+                </div>
+
+                <!-- Step by Step Process -->
+                <div class="admission-steps">
+                    <h2>Step‑by‑Step Admission Journey</h2>
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Submit an Inquiry</h3>
+                            <p>Parents start by filling out the admission inquiry form online or visiting the school in person. This allows us to share detailed information about our programs, fees, and requirements before the application is completed.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Complete the Application</h3>
+                            <p>Fill out the official admission form (available for download in Parent Zone) and submit it along with the necessary documents.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Assessment & Parent Interview</h3>
+                            <p>Once the application is submitted, we schedule a short age‑appropriate assessment for the child and a brief parent interview. This helps us understand the learner’s needs and ensures we place them in the right class.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Receive Admission Offer</h3>
+                            <p>After successful assessment and interview, parents receive an admission offer. You will also receive information about fees, uniform, transport, and starting dates.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Fee Payment & Enrollment</h3>
+                            <p>Upon fee payment and submission of all required documents, the child is officially enrolled and ready to begin their learning journey at Yoani Springs Academy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Required Documents -->
+                <div class="required-docs">
+                    <h3>Documents Required for Admission</h3>
+                    <ul>
+                        <li>Copy of the child's Birth Certificate</li>
+                        <li>Previous school report cards (if applicable)</li>
+                        <li>Passport-sized photos (2 copies)</li>
+                        <li>Copy of parents/guardian ID cards</li>
+                        <li>Completed Admission Form (available in Parent Zone)</li>
+                        <li>Immunization/Vaccination record</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">For transfer students, please also provide a transfer letter from the previous school.</p>
+                </div>
+
+                <!-- Call to Action -->
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="parent-zone.html" class="btn btn-outline" style="background: #f97316; color: white; border: none;">Back to Parent Zone</a>
+                    <a href="contact.html" class="btn btn-primary" style="margin-left: 1rem;">Contact Admissions Office</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <h3>Yoani Springs Academy</h3>
+                        <p>Excellence and Leadership in Education. Where young minds grow to lead.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/yoani.springs.academy.2025?mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+                            <a href="https://www.tiktok.com/@yoani.springs.aca?_r=1&_d=f1miam211ek934&sec_uid=MS4wLjABAAAARRER8ot2l9bVdSS1VjYmo2h_tfa797qGUz183iDc7G8uETjy2-qiynYsMIBIa8eb&share_author_id=7631556686801470484&sharer_language=en&source=h5_m&u_code=f35c3a9244538b&timestamp=1777191089&user_id=7631556686801470484&sec_user_id=MS4wLjABAAAARRER8ot2l9bVdSS1VjYmo2h_tfa797qGUz183iDc7G8uETjy2-qiynYsMIBIa8eb&item_author_type=1&utm_source=whatsapp&utm_campaign=client_share&utm_medium=android&share_iid=7631800672535725844&share_link_id=71a4a8c8-c6a7-4ebb-9241-d628f6911ae5&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1"
+                                target="_blank" rel="noopener noreferrer" aria-label="TikTok">🎵</a>
+                            <a href="https://www.instagram.com/yoanispringsacademy?igsh=Nms2dTFxa3hhajFu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li><a href="parent-zone.html">Parent Zone</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <address>
+                        <p>📍 Salama Town, Makueni County<br>Behind Tangu Springs Hotel, 300m from town</p>
+                        <p>📞 +254 725 906 416</p>
+                        <p>✉️ yoanispringsacademy@gmail.com</p>
+                    </address>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Yoani Springs Academy. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Yoani Springs Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        /* Modal styles – placed here to ensure they work even if style.css is missing them */
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 2rem;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 24px;
+            position: relative;
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: #aaa;
+            transition: color 0.2s;
+        }
+        
+        .close-modal:hover {
+            color: #f97316;
+        }
+        
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: #f97316;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0;
+            margin-top: 0.75rem;
+            display: inline-block;
+            font-size: 0.95rem;
+        }
+        
+        .read-more-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cms-root" data-route="blog">
+        <header class="site-header" id="main-header">
+            <div class="container header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.jpeg" alt="Yoani Springs Academy Logo" class="logo-img">
+                    </a>
+                </div>
+                <nav class="main-nav" id="primary-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="parent-zone.html">Parent Zone</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Menu">☰</button>
+                </nav>
+                <a href="contact.html" class="btn btn-primary enroll-nav-btn">Enroll Now</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="container">
+                    <h1>Our Blog</h1>
+                    <p>News, tips, and stories from Yoani Springs Academy</p>
+                </div>
+            </section>
+
+            <section class="blog-grid-section">
+                <div class="container">
+                    <div class="blog-grid">
+                        <!-- Blog posts will be injected here by cms.js -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modal for full blog post -->
+            <div id="blogModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <div id="modalContent"></div>
+                </div>
+            </div>
+
+            <!-- Enroll Now CTA -->
+            <section class="cta-banner">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2>Give Your Child the Best Start</h2>
+                        <p>Admissions open. Join the Yoani Springs family today.</p>
+                        <a href="contact.html" class="btn btn-primary btn-large">Enroll Now →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <h3>Yoani Springs Academy</h3>
+                        <p>Excellence and Leadership in Education. Where young minds grow to lead.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/yoani.springs.academy.2025?mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+                            <a href="https://www.tiktok.com/@yoani.springs.aca?_r=1&_d=f1miam211ek934&sec_uid=MS4wLjABAAAARRER8ot2l9bVdSS1VjYmo2h_tfa797qGUz183iDc7G8uETjy2-qiynYsMIBIa8eb&share_author_id=7631556686801470484&sharer_language=en&source=h5_m&u_code=f35c3a9244538b&timestamp=1777191089&user_id=7631556686801470484&sec_user_id=MS4wLjABAAAARRER8ot2l9bVdSS1VjYmo2h_tfa797qGUz183iDc7G8uETjy2-qiynYsMIBIa8eb&item_author_type=1&utm_source=whatsapp&utm_campaign=client_share&utm_medium=android&share_iid=7631800672535725844&share_link_id=71a4a8c8-c6a7-4ebb-9241-d628f6911ae5&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1"
+                                target="_blank" rel="noopener noreferrer" aria-label="TikTok">🎵</a>
+                            <a href="https://www.instagram.com/yoanispringsacademy?igsh=Nms2dTFxa3hhajFu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li><a href="parent-zone.html">Parent Zone</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <address>
+                            <p>📍 Salama Town, Makueni County<br>Behind Tangu Springs Hotel, 300m from town</p>
+                            <p>📞 +254 725 906 416</p>
+                            <p>✉️ yoanispringsacademy@gmail.com</p>
+                        </address>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Yoani Springs Academy. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
