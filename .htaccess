@@ -1,0 +1,63 @@
+# =====================================================================
+#  Yoani Springs Academy: clean web addresses
+#  Pages now live in folders, so addresses are /about/, /programs/ ...
+#  with no ".html". These rules send old links (about.html) to the new ones
+#  with a permanent redirect, so Google results and shared links keep working.
+#  Works on Apache and LiteSpeed hosting (cPanel).
+# =====================================================================
+
+Options -MultiViews -Indexes
+DirectoryIndex index.html
+DirectorySlash On
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Optional: force https and www. Remove the # on the three lines below
+  # only if your host isn't already doing this.
+  # RewriteCond %{HTTPS} off [OR]
+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
+  # RewriteRule ^ https://www.yoanisprings.co.ke%{REQUEST_URI} [L,R=301,NE]
+
+  # /index.html  ->  /
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^ / [R=301,L]
+
+  # /about.html  ->  /about/   (and the same for every page)
+  RewriteCond %{THE_REQUEST} \s/+(about|programs|admission|parent-zone|blog|contact)\.html[\s?] [NC]
+  RewriteRule ^ /%1/ [R=301,L]
+</IfModule>
+
+# ---------- Speed: compression ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript text/javascript application/json image/svg+xml
+</IfModule>
+
+# ---------- Speed: browser caching ----------
+<IfModule mod_mime.c>
+  AddType font/woff .woff
+  AddType text/javascript .js .mjs
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType text/javascript "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>

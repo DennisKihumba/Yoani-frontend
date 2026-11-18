@@ -1,0 +1,40 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/programs.html",
+      "destination": "/programs/",
+      "permanent": true
+    },
+    {
+      "source": "/admission.html",
+      "destination": "/admission/",
+      "permanent": true
+    },
+    {
+      "source": "/parent-zone.html",
+      "destination": "/parent-zone/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    }
+  ]
+}
